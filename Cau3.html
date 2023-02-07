@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sumOfListPrime</title>
+</head>
+<body>
+<script>
+    function primeCheck(number) {
+        let dem = 0;
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                dem++;
+            }
+        }
+        if (dem === 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function sumOfListPrime(x) {
+        let sum = 0;
+        for (let i = 0; i <= x; i++) {
+            if (primeCheck(i)) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+    let x = 11;
+    document.write(`Tổng các số nguyên tố từ 0 đến ${x} là: ` + sumOfListPrime(x));
+</script>
+</body>
+</html>
